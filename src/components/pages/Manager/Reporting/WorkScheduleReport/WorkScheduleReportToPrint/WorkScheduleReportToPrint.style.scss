@@ -1,0 +1,151 @@
+.work-schedule-report-to-print__empty {
+  height: 530px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-schedule-report-to-print {
+  padding: 40px;
+  background: white;
+  height: 1000px;
+
+  .work-schedule-report-to-print__header {
+    position: relative;
+    .work-schedule-report-to-print__header__company {
+      display: flex;
+      align-items: center;
+
+      .work-schedule-report-to-print__header__company__logo {
+        width: 24px;
+        margin-right: 7px;
+        margin-top: -1px;
+      }
+
+      .work-schedule-report-to-print__header__company__brand {
+        .work-schedule-report-to-print__header__company__brand__name {
+          font-size: 13px;
+          letter-spacing: 2px;
+          color: #ff8220;
+          font-weight: bold;
+        }
+
+        .work-schedule-report-to-print__header__company__brand__slogan {
+          font-size: 8px;
+          font-style: italic;
+          margin-top: -3px;
+          color: gray;
+        }
+      }
+    }
+
+    .work-schedule-report-to-print__header__created-date {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: gray;
+      font-size: 12px;
+    }
+
+    .work-schedule-report-to-print__header__title {
+      padding: 30px;
+      padding-top: 70px;
+      width: 100%;
+      text-align: center;
+
+      h2 {
+        color: #ff8220;
+        font-weight: bold;
+      }
+
+      .work-schedule-report-to-print__header__title__date-range {
+        font-size: 12px;
+        color: gray;
+      }
+    }
+  }
+
+  .work-schedule-report-to-print__content {
+    padding-top: 30px;
+    .work-schedule-report-to-print__content__staff-info {
+      .work-schedule-report-to-print__content__staff-info__item {
+        line-height: 35px;
+        font-size: 12px;
+      }
+    }
+
+    .work-schedule-report-to-print__content__work-schedule {
+      padding-top: 30px;
+
+      .work-schedule-report-to-print__content__work-schedule__table {
+        margin-top: 10px;
+      }
+
+      .ant-table-container {
+        &::after {
+          content: unset;
+        }
+      }
+
+      $tableFontSize: 10px;
+      .ant-table {
+        thead > tr > th {
+          font-size: $tableFontSize;
+          background: #ff8220;
+          color: white;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        tbody > tr:hover > td {
+          background: none;
+        }
+
+        tbody > tr {
+          td {
+            ul {
+              padding-left: 0;
+              list-style: none;
+
+              li {
+                font-size: $tableFontSize - 2;
+                background: #fff6e6;
+                padding: 2px;
+                border-radius: 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                white-space: nowrap;
+                margin-bottom: 7px;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .work-schedule-report-to-print__content__manager-confirm {
+      width: 100%;
+      height: 350px;
+
+      .work-schedule-report-to-print__content__manager-confirm__stand-for {
+        font-weight: bold;
+      }
+
+      .work-schedule-report-to-print__content__manager-confirm__signature {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        
+        img {
+          width: 150px;
+        }
+      }
+
+      .work-schedule-report-to-print__content__manager-confirm__fullname {
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,209 @@
+$boxShadow1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+.product-management__supplier-dialog__content__suppliers__item__menu {
+  .ant-dropdown-menu-item,
+  .ant-dropdown-menu-submenu-title {
+    padding: 0 !important;
+  }
+}
+
+.product-management__supplier-dialog {
+  
+  .product-management__supplier-dialog__btn-open {
+    border-color: #ff8220;
+    background: white;
+    color: #ff8220;
+    display: flex;
+    align-items: center;
+    min-height: 34px;
+    border-radius: 24px;
+    width: 100%;
+    transition: 0.2s;
+
+    .product-management__supplier-dialog__btn-open__text {
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    &:hover {
+      background: #ff8220;
+      border-color: #ff8220;
+      color: white;
+    }
+  }
+}
+
+.product-management__supplier-dialog__content {
+  $primaryFontSize: 12px;
+
+  .styled-scrollbar {
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba($color: #000000, $alpha: 0.2);
+      border-radius: 5px;
+    }
+  }
+
+  .product-management__supplier-dialog__content__title {
+    display: flex;
+    align-items: center;
+
+    .product-management__supplier-dialog__content__title__icon-wrapper {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: orange;
+      border-radius: 50%;
+      margin-right: 10px;
+
+      .product-management__supplier-dialog__content__title__icon-wrapper__icon {
+        color: white;
+      }
+    }
+
+    .product-management__supplier-dialog__content__title__text {
+      color: #ff8220;
+      font-weight: bold;
+    }
+  }
+
+  .ant-modal-content {
+    width: 60vw;
+    left: -35%;
+  }
+
+  .ant-modal-footer {
+    display: none;
+  }
+
+  .product-management__supplier-dialog__content__toolbar {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+
+    .ant-input-affix-wrapper {
+      width: 300px;
+    }
+
+    .product-management__supplier-dialog__content__toolbar__btn-open-add-supplier-form {
+      background: #ff8220;
+      color: white;
+      border: 0;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      margin-left: 10px;
+    }
+
+    $searchBoxBackground: #f5f5f5;
+    .ant-input-affix-wrapper {
+      background: $searchBoxBackground;
+      border: 1px solid #eee;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: none;
+      outline-style: none;
+      line-height: 25px;
+    }
+    .ant-input {
+      font-size: $primaryFontSize;
+      background: $searchBoxBackground;
+    }
+  }
+
+  .product-management__supplier-dialog__content__frm-add-supplier {
+
+    .product-management__supplier-dialog__content__frm-add-supplier__title {
+      color: #ff8220;
+    }
+
+    .ant-form {
+      padding: 10px;
+    }
+
+    .ant-form-item {
+      margin-bottom: 15px;
+      label {
+        font-size: $primaryFontSize;
+        color: rgba($color: #000000, $alpha: 0.5);
+      }
+    }
+
+    .ant-input {
+      font-size: $primaryFontSize;
+      width: 80%;
+    }
+
+    .ant-form-item-has-error .ant-form-item-explain,
+    .ant-form-item-has-error .ant-form-item-split {
+      font-size: 10px;
+      min-height: 10px;
+    }
+
+    .product-management__supplier-dialog__content__frm-add-supplier__btn-submit {
+      background: #ff8220;
+      border: 0;
+      font-weight: bold;
+      min-width: 200px;
+      box-shadow: $boxShadow1;
+      border-radius: 24px;
+      min-height: 35px;
+    }
+  }
+
+  .product-management__supplier-dialog__content__suppliers {
+    margin-top: 30px;
+    position: relative;
+
+    .product-management__supplier-dialog__content__suppliers__item__btn-drop-menu {
+      cursor: pointer;
+      transition: 0.2s;
+      color: rgba($color: #000000, $alpha: 0.4);
+
+      &:hover {
+        color: #ff8220;
+      }
+    }
+
+    .ant-table-body {
+      max-height: 400px !important;
+      height: 400px !important;
+      @extend .styled-scrollbar;
+    }
+
+    .ant-table {
+      $tableFontSize: 12px;
+
+      thead > tr > th {
+        font-size: $tableFontSize;
+        color: #ff8220;
+        font-weight: bold;
+      }
+
+      tbody > tr {
+        transition: 0.2s;
+
+        td {
+          font-size: $tableFontSize;
+
+          .ant-empty-normal {
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+        }
+
+        &:hover {
+          td {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.importing-request__container__block__body__request-details {
+  $borderRadius0: 3px;
+  $fontSize0: 8.5px;
+  $fontSize1: 10px;
+  $fontSize2: 12px;
+
+  .importing-request__container__block__body__request-details__btn-open {
+    width: 100%;
+    min-height: 80px;
+    background: white;
+    border: 1px solid #eee;
+    margin-bottom: 7px;
+    padding: 10px;
+    cursor: pointer;
+
+    .importing-request__container__block__body__request-details__btn-open__avatar {
+      margin-top: 2px;
+    }
+
+    .importing-request__container__block__body__request-details__btn-open__details {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+
+      .importing-request__container__block__body__request-details__btn-open__details__title {
+        font-size: $fontSize2;
+      }
+
+      .importing-request__container__block__body__request-details__btn-open__details__time {
+        font-size: $fontSize0;
+        color: rgba($color: #000000, $alpha: 0.4);
+      }
+
+      .importing-request__container__block__body__request-details__btn-open__details__products {
+        font-size: $fontSize1;
+        padding-top: 5px;
+        margin: 0;
+      }
+    }
+  }
+}

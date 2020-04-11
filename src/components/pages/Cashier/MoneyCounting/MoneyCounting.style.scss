@@ -1,0 +1,381 @@
+$boxShadow1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+$primaryTextShadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+$primaryBorderRadius: 7px;
+
+.money-counting {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  border-radius: $primaryBorderRadius;
+
+  .centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .styled-scrollbar {
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba($color: #000000, $alpha: 0.2);
+      border-radius: $primaryBorderRadius;
+    }
+  }
+
+  .round-bordered {
+    border-radius: $primaryBorderRadius;
+    overflow: hidden;
+  }
+
+  .money-counting__getting-started {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border: 1px solid #eee;
+    @extend .round-bordered;
+
+    .money-counting__getting-started__content {
+      height: 67%;
+      width: 100%;
+      .money-counting__getting-started__content__left {
+        height: 100%;
+        width: 45%;
+        float: left;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 12%;
+        padding-top: 5%;
+
+        .money-counting__getting-started__content__left__title {
+          color: #ff8220;
+          font-weight: bold;
+          font-size: 2rem;
+        }
+
+        .money-counting__getting-started__content__left__btn-start {
+          border: 0;
+          color: white;
+          background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+          text-shadow: $primaryTextShadow;
+          font-weight: bold;
+          border-radius: 24px;
+          min-height: 45px;
+          max-width: 60%;
+          font-size: 1rem;
+          position: relative;
+          z-index: 4;
+          margin-top: 3%;
+          box-shadow: $boxShadow1;
+        }
+      }
+
+      .money-counting__getting-started__content__right-cover {
+        height: 100%;
+        width: 55%;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .money-counting__getting-started__content__right-cover__img {
+          margin-top: 20%;
+          height: 70%;
+          width: 70%;
+          margin-left: -5%;
+          background: url("../../../../assets/images/checkout-cover-2.gif");
+          background-size: 100% 100%;
+        }
+      }
+    }
+
+    .money-counting__getting-started__bottom-wave {
+      height: 33%;
+    }
+  }
+
+  .money-counting__panel {
+    background: white;
+    height: 100%;
+    border: 1px solid #eee;
+    @extend .round-bordered;
+    position: relative;
+
+    .money-counting__panel__checkout-done {
+      position: absolute;
+      background: rgba($color: #fff, $alpha: 0.8);
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .money-counting__panel__checkout-done__title {
+        font-size: 20px;
+      }
+
+      .money-counting__panel__checkout-done__icon {
+        color: #44b543;
+        font-size: 3rem;
+        margin: 20px 0 40px 0;
+      }
+
+      .money-counting__panel__checkout-done__btn-continue {
+        background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+        border: 0;
+        border-radius: 24px;
+        box-shadow: $boxShadow1;
+        color: white;
+        font-weight: bold;
+        min-height: 45px;
+        min-width: 250px;
+        font-size: 1rem;
+        text-shadow: $primaryTextShadow;
+      }
+    }
+
+    .money-counting__panel__left {
+      background: white;
+      height: 100%;
+      padding: 20px;
+      padding-top: 0;
+      border-right: 1px solid #eee;
+
+      .money-counting__panel__left__header {
+        height: 11%;
+        display: flex;
+        align-items: center;
+
+        .money-counting__panel__left__header__btn-back {
+          color: rgba($color: #000000, $alpha: 0.4);
+          border: 0;
+          box-shadow: none;
+        }
+
+        .money-counting__panel__left__header__company {
+          display: flex;
+          align-items: center;
+          margin-left: 1%;
+          transform: scale(0.9, 0.9);
+
+          .money-counting__panel__left__header__company__logo {
+            width: 25px;
+            margin-right: 7px;
+            margin-top: -1px;
+          }
+          .money-counting__panel__left__header__company__brand {
+            .money-counting__panel__left__header__company__brand__name {
+              font-size: 13px;
+              letter-spacing: 2px;
+              color: #ff8220;
+              font-weight: bold;
+            }
+
+            .money-counting__panel__left__header__company__brand__slogan {
+              font-size: 8px;
+              font-style: italic;
+              margin-top: -3px;
+              color: gray;
+            }
+          }
+        }
+      }
+
+      .money-counting__panel__left__product-scanning {
+        height: 40%;
+        width: 100%;
+        background: #eee;
+        position: relative;
+        margin-top: 1%;
+
+        .money-counting__panel__left__product-scanning__scanner {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+        }
+      }
+
+      .money-counting__panel__left__product-details {
+        margin-top: 30px;
+        .money-counting__panel__left__product-details__empty {
+          padding-top: 30px;
+          color: silver;
+          font-size: 12px;
+        }
+
+        .money-counting__panel__left__product-details__title {
+          color: #ff8220;
+          font-weight: bold;
+        }
+
+        .money-counting__panel__left__product-details__btn-clear {
+          padding: 0;
+          border: 0;
+          background: #f1f3f5;
+          color: gray;
+          font-size: 14px;
+        }
+
+        .money-counting__panel__left__product-details__labels,
+        .money-counting__panel__left__product-details__texts {
+          list-style: none;
+          padding-left: 0;
+          margin-top: 5px;
+
+          li {
+            font-size: 11px;
+            line-height: 35px;
+          }
+        }
+
+        .money-counting__panel__left__product-details__labels {
+          li {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .money-counting__panel__right {
+      position: relative;
+      height: 100%;
+
+      .money-counting__panel__right__header {
+        height: 11%;
+        width: 100%;
+
+        .money-counting__panel__right__header__title {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          padding-left: 5%;
+          color: #ff8220;
+          font-weight: bold;
+
+          .money-counting__panel__right__header__title__icon-wrapper {
+            background: white;
+            margin-right: 12px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .money-counting__panel__right__header__title__icon-wrapper__total-item {
+              position: absolute;
+              font-size: 10px;
+              width: 16px;
+              height: 16px;
+              color: white;
+              background: crimson;
+              font-weight: bold;
+              top: -20%;
+              right: -20%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 50%;
+            }
+
+            .money-counting__panel__right__header__title__icon-wrapper__icon {
+              color: #ff8220;
+              font-size: 18px;
+              margin-left: -2px;
+            }
+          }
+        }
+
+        .money-counting__panel__right__header__total-price {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          margin-top: 2px;
+
+          .money-counting__panel__right__header__total-price__label {
+            font-size: 12px;
+          }
+
+          .money-counting__panel__right__header__total-price__price {
+            margin-left: 10px;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .money-counting__panel__right__shopping-cart {
+        height: 89%;
+
+        .money-counting__panel__right__shopping-cart__list-products {
+          width: 100%;
+          $tableFontSize: 12px;
+
+          .money-counting__panel__right__shopping-cart__list-products__btn-remove-item {
+            border: 0;
+            box-shadow: 0;
+            color: rgba($color: #000000, $alpha: 0.2);
+          }
+
+          .money-counting__panel__right__shopping-cart__list-products__item {
+            display: flex;
+            align-items: center;
+
+            img {
+              width: 20px;
+            }
+
+            .money-counting__panel__right__shopping-cart__list-products__item__name {
+              margin-left: 10px;
+            }
+          }
+
+          .ant-table thead > tr > th {
+            font-size: $tableFontSize;
+            color: #ff8220;
+            font-weight: bold;
+          }
+
+          .ant-table-body {
+            height: 500px;
+            @extend .styled-scrollbar;
+          }
+
+          .ant-table {
+            tbody > tr {
+              td {
+                font-size: $tableFontSize - 1;
+                transition: 0.2s;
+              }
+
+              &:hover {
+                td {
+                  color: #ff8220;
+                  background: none;
+                }
+              }
+            }
+
+            .ant-empty {
+              height: 450px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

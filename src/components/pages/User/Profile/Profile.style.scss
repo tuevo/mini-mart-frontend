@@ -1,0 +1,78 @@
+.profile {
+  width: 100vw;
+  height: 100vh;
+  background: #ff8220;
+  position: relative;
+
+  .profile__main {
+    width: 40%;
+    height: 100%;
+    background: white;
+    position: absolute;
+    z-index: 2;
+    left: 24%;
+    top: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+    .profile__main__header {
+      padding-top: 30px;
+      height: 35%;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .profile__main__header__user-avatar {
+        margin: 10px;
+      }
+
+      .profile__main__header__user-info {
+        .profile__main__header__user-info__name,
+        .profile__main__header__user-info__role {
+          text-align: center;
+        }
+
+        .profile__main__header__user-info__name {
+          font-size: 18px;
+          color: rgba($color: #000000, $alpha: 0.8);
+        }
+
+        .profile__main__header__user-info__role {
+          font-size: 10px;
+          color: rgba($color: #000000, $alpha: 0.5);
+        }
+      }
+    }
+
+    .profile__main__body {
+      padding: 20px;
+      padding-left: 40px;
+      ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+          line-height: 30px;
+          font-size: 11px;
+
+          &.--highline {
+            font-weight: bold;
+            color: rgba($color: #000000, $alpha: 0.7);
+          }
+        }
+
+        &.profile__main__body__list-user-fields {
+          font-weight: bold;
+          color: rgba($color: #000000, $alpha: 0.5);
+        }
+
+        &.profile__main__body__list-user-values {
+          color: rgba($color: #000000, $alpha: 0.5);
+        }
+      }
+    }
+  }
+}

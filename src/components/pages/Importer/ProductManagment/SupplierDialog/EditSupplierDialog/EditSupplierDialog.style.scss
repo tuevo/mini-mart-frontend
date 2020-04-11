@@ -1,0 +1,36 @@
+.product-management__supplier-dialog__editing-dialog {
+  .product-management__supplier-dialog__editing-dialog__btn-open {
+    color: rgba($color: #000000, $alpha: 0.65);
+    width: 100%;
+  }
+}
+
+.product-management__supplier-dialog__editing-dialog__content {
+  $primaryFontSize: 12px;
+  .ant-form-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .ant-form-item-label {
+    text-align: left;
+
+    label {
+      font-size: $primaryFontSize;
+      color: rgba($color: #000000, $alpha: 0.5);
+    }
+  }
+
+  .ant-input {
+    width: 100%;
+    font-size: $primaryFontSize;
+  }
+
+  .ant-form-item-has-error .ant-form-item-explain,
+  .ant-form-item-has-error .ant-form-item-split {
+    font-size: 10px;
+    min-height: 0;
+    max-height: 10px;
+  }
+}

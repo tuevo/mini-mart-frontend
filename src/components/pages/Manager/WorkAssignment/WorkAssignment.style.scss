@@ -1,0 +1,444 @@
+$leftSidebarHeight: 100vh;
+$primaryTextShadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+$boxShadow1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+$boxShadow2: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 5px rgba(0, 0, 0, 0.23);
+
+.work-assignment {
+  background: #ff8220;
+  padding: 0 15px;
+
+  .centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .styled-scrollbar {
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba($color: #000000, $alpha: 0.2);
+      border-radius: 3px;
+    }
+  }
+
+  .ant-list-bordered {
+    border-color: #eee;
+  }
+  .work-assignment__left-sidebar {
+    height: $leftSidebarHeight;
+    padding-right: 10px;
+
+    .work-assignment__left-sidebar__year-selection {
+      .ant-select {
+        width: 100%;
+        margin-top: 5px;
+        box-shadow: $boxShadow1;
+        border-radius: 3px;
+        overflow: hidden;
+
+        .ant-select-selector {
+          border: 0;
+        }
+      }
+    }
+
+    .ant-list-items {
+      font-size: 10px;
+      overflow: hidden;
+      overflow-y: auto;
+      @extend .styled-scrollbar;
+    }
+
+    .work-assignment__left-sidebar__title {
+      padding: 15px 3px 5px 3px;
+      color: white;
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+    .work-assignment__left-sidebar__list-tasks {
+      .work-assignment__left-sidebar__list-tasks__wrapper {
+        margin-top: 5px;
+        height: 68 / 100 * $leftSidebarHeight;
+        background: white;
+        border-radius: 3px;
+        box-shadow: $boxShadow1;
+        overflow: hidden;
+        overflow-y: auto;
+        @extend .styled-scrollbar;
+
+        .ant-list-items {
+          .ant-list-item {
+            font-size: 12px;
+            padding-left: 0;
+            cursor: pointer;
+            transition: 0.2s;
+          }
+        }
+      }
+
+      .work-assignment__left-sidebar__list-tasks__item {
+        transition: 0.2s;
+        border-left: 4px solid white;
+
+        .work-assignment__left-sidebar__list-tasks__item__task-name {
+          margin-left: 10px;
+          display: block;
+        }
+
+        .work-assignment__left-sidebar__list-tasks__item__btn-remove {
+          color: rgba($color: #000000, $alpha: 0.2);
+          font-size: 12px;
+          font-weight: bold;
+          height: 100%;
+          @extend .centered-content;
+        }
+
+        &.work-assignment__left-sidebar__list-tasks__item--selected {
+          background: #fff6e6;
+          color: darkorange;
+          font-weight: bold;
+          border-left-color: #ffb833;
+        }
+
+        &:not(.work-assignment__left-sidebar__list-tasks__item--selected) {
+          color: rgba($color: #000000, $alpha: 0.5);
+
+          &:hover {
+            background: #f5f5f5;
+            border-left-color: #f5f5f5;
+          }
+        }
+      }
+    }
+  }
+
+  .work-assignment__content {
+    height: 90.2vh;
+    position: relative;
+    box-shadow: $boxShadow2;
+    border-radius: 5px;
+    border-top-left-radius: 12px;
+    overflow: hidden;
+
+    .work-assignment__content__task-work-day-panel {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      .work-assignment__content__task-work-day-panel__panel {
+        padding: 30px 10px 10px 15px;
+        height: 100%;
+        width: 28%;
+        background: white;
+        position: absolute;
+        z-index: 3;
+        right: 0;
+        box-shadow: $boxShadow2;
+
+        $blockPaddingTop: 20px;
+
+        .work-assignment__content__task-work-day-panel__panel__main__list-work-shifts {
+          padding-top: $blockPaddingTop / 2;
+
+          .ant-list-items {
+            font-size: 12px;
+
+            .ant-list-item {
+              padding-top: 10px;
+            }
+          }
+
+          .work-assignment__content__task-work-day-panel__panel__main__list-work-shifts__item {
+            color: rgba($color: #000000, $alpha: 0.5);
+            padding: 6px;
+            margin-left: -5px;
+            border-left: 4px solid #f8f8f8;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+              background: #f5f5f5;
+            }
+          }
+
+          .work-assignment__content__task-work-day-panel__panel__main__list-work-shifts__item--selected {
+            background: #fff6e6;
+            padding: 6px;
+            margin-left: -5px;
+            border-left: 4px solid #ffb833;
+            width: 100%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .work-assignment__content__task-work-day-panel__panel__main__list-work-shifts__details {
+          padding-top: $blockPaddingTop;
+
+          ul {
+            list-style: none;
+            padding-left: 0;
+
+            li {
+              line-height: 30px;
+              font-size: 12px;
+            }
+
+            &.work-assignment__content__task-work-day-panel__panel__main__list-work-shifts__time--value {
+              font-weight: bold;
+            }
+          }
+        }
+
+        .work-assignment__content__task-work-day-panel__panel__main {
+          padding-top: $blockPaddingTop;
+          padding-left: 5px;
+
+          .work-assignment__content__task-work-day-panel__panel__main__title {
+            font-size: 12px;
+            color: rgba($color: #000000, $alpha: 0.7);
+          }
+
+          .work-assignment__content__task-work-day-panel__panel__main__list-staffs {
+            margin-top: -5px;
+
+            .work-assignment__content__task-work-day-panel__panel__main__list-staffs__note {
+              padding-top: 5px;
+              line-height: 15px;
+              font-size: 9px;
+              margin-bottom: 5px;
+              color: rgba($color: #000000, $alpha: 0.5);
+            }
+
+            .ant-list-items {
+              .ant-list-item {
+                @extend .centered-content;
+                padding: 0;
+                margin-bottom: 7px;
+                border-bottom: 0;
+              }
+
+              .ant-list-item-meta {
+                .ant-list-item-meta-title {
+                  font-size: 12px;
+                  margin-top: -1.5px;
+                }
+                .ant-list-item-meta-description {
+                  font-size: 9px;
+                  margin-top: -9px;
+                }
+              }
+            }
+
+            .work-assignment__content__task-work-day-panel__panel__main__list-work-shifts__wrapper,
+            .work-assignment__content__task-work-day-panel__panel__main__list-staffs__wrapper {
+              border: 1px solid #eee;
+              padding: 0 10px;
+              border-radius: 3px;
+              overflow: hidden;
+              overflow-y: auto;
+              background: #f8f8f8;
+              padding-top: 10px;
+              margin-top: 5px;
+              @extend .styled-scrollbar;
+            }
+
+            .work-assignment__content__task-work-day-panel__panel__main__list-work-shifts__wrapper {
+              height: 130px;
+              padding-right: 5px;
+            }
+
+            .work-assignment__content__task-work-day-panel__panel__main__list-staffs__wrapper {
+              height: 250px;
+
+              .work-assignment__content__task-work-day-panel__panel__main__list-staffs__staff {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                background: white;
+                padding: 15px;
+                padding-bottom: 10px;
+                border: 1px solid #eee;
+                border-radius: 3px;
+              }
+            }
+
+            .work-assignment__content__task-work-day-panel__panel__main__list-staffs__btn-unassign,
+            .work-assignment__content__task-work-day-panel__panel__main__list-staffs__btn-close {
+              color: rgba($color: #000000, $alpha: 0.4);
+              font-size: 12px;
+              font-weight: bold;
+              height: 100%;
+              @extend .centered-content;
+            }
+
+            .work-assignment__content__task-work-day-panel__panel__main__list-staffs__btn-close {
+              color: rgba($color: #000000, $alpha: 0.15);
+            }
+          }
+        }
+      }
+    }
+
+    .work-assignment__content__btn-edit {
+      font-size: 12px;
+      color: rgba($color: #000000, $alpha: 0.5);
+    }
+
+    $contentHeaderColor: white;
+
+    .work-assignment__content__header {
+      height: 20%;
+      padding: 20px;
+      padding-top: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-sizing: border-box;
+      // background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+      background: url("https://riviste.newbusinessmedia.it/wp-content/uploads/sites/27/2013/10/slide1.jpg");
+      background-size: 100% 190%;
+      background-position-y: 15%;
+
+      border-bottom: 4px solid white;
+      position: relative;
+
+      .work-assignment__content__header__dark-bg {
+        position: absolute;
+        z-index: 1;
+        background: rgba($color: #000000, $alpha: 0.5);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .work-assignment__content__header__task-name {
+        position: relative;
+        z-index: 2;
+        h3 {
+          color: $contentHeaderColor;
+        }
+      }
+
+      .work-assignment__content__header__task-expiration {
+        font-size: 12px;
+        color: $contentHeaderColor;
+      }
+    }
+
+    .work-assignment__content__body {
+      margin-top: -5%;
+      position: relative;
+      z-index: 2;
+
+      .work-assignment__content__body__tabs {
+        .ant-tabs-tab {
+          color: #dcdcdc;
+          font-size: 12px;
+        }
+
+        .ant-tabs-bar {
+          margin: 0;
+        }
+        .ant-tabs-nav-scroll {
+          padding-left: 20px;
+        }
+        .ant-tabs-nav .ant-tabs-tab-active {
+          color: $contentHeaderColor;
+          font-weight: bold;
+        }
+        .ant-tabs-ink-bar {
+          background: #ffb833;
+          height: 3px;
+        }
+
+        .work-assignment__content__body__tabs__work-schedule {
+          padding: 20px;
+          background: white;
+          height: 100vh;
+
+          .work-assignment__content__body__tabs__work-schedule__work-day {
+            padding: 10px;
+            padding-right: 5px;
+            padding-bottom: 0;
+            height: 85px;
+            background: #f8f8f8;
+            border: 1px solid #eee;
+            cursor: pointer;
+            transition: 0.2s;
+
+            &:hover {
+              background: #f5f5f5;
+            }
+
+            &.work-assignment__content__body__tabs__work-schedule__work-day--selected {
+              border: 2px solid #ffb833;
+              background: #fff6e6;
+              box-sizing: border-box;
+              position: relative;
+              z-index: 5;
+              transform: scale(1.05, 1.05);
+              box-shadow: $boxShadow2;
+            }
+
+            .work-assignment__content__body__tabs__work-schedule__work-day__day-in-month {
+              font-size: 12px;
+
+              &.work-assignment__content__body__tabs__work-schedule__work-day__day-in-month--sunday {
+                color: #ff8220;
+              }
+            }
+
+            .work-assignment__content__body__tabs__work-schedule__work-day__week-day {
+              color: gray;
+              font-size: 9px;
+              display: block;
+
+              &.work-assignment__content__body__tabs__work-schedule__work-day__week-day--sunday {
+                color: #ff8220;
+              }
+            }
+
+            .work-assignment__content__body__tabs__work-schedule__work-day__note {
+              font-size: 9px;
+              padding-top: 10px;
+              box-sizing: border-box;
+            }
+
+            .work-assignment__content__body__tabs__work-schedule__work-day__staffs {
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              height: 50px;
+              .work-assignment__content__body__tabs__work-schedule__work-day__staffs__avatar--plus {
+                width: 16px;
+                height: 16px;
+                background: rgba($color: #000000, $alpha: 0.7);
+                color: white;
+                border-radius: 50%;
+                font-size: 10px;
+                padding: 3px 0 2px 0;
+                font-size: 9px;
+                display: inline-block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

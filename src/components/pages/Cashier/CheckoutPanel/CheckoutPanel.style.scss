@@ -1,0 +1,87 @@
+.checkout-panel {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #ff8220;
+  padding: 0 15px;
+
+  $boxShadow1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  $boxShadow2: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 5px rgba(0, 0, 0, 0.23);
+  $primaryFontSize: 12px;
+  $primaryBorderRadius: 7px;
+  $primaryBgColor: #f8f8f8;
+
+  .checkout-panel__main-board {
+    width: 100%;
+    height: 90vh;
+    background: $primaryBgColor;
+    box-shadow: $boxShadow2;
+    border-radius: $primaryBorderRadius;
+    overflow: hidden;
+    display: flex;
+
+    .ant-row {
+      height: 100%;
+    }
+
+    .checkout-panel__main-board__navbar {
+      height: 100%;
+      padding-top: 0.5%;
+
+      .checkout-panel__main-board__navbar__item {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-left: 15px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        background: white;
+        box-shadow: $boxShadow1;
+
+        &.checkout-panel__main-board__navbar__item--selected {
+          background: #ff8220 !important;
+
+          .checkout-panel__main-board__navbar__item__icon {
+            color: white !important;
+          }
+        }
+
+        .checkout-panel__main-board__navbar__item__icon {
+          margin-top: 2px;
+        }
+      }
+
+      .ant-menu-dark.ant-menu-inline,
+      .ant-menu-dark.ant-menu-vertical,
+      .ant-menu-dark.ant-menu-vertical-left,
+      .ant-menu-dark.ant-menu-vertical-right {
+        height: 100%;
+        width: 60px;
+        background: $primaryBgColor;
+
+        .ant-menu-item {
+          padding: 2px 0 0 0 !important;
+          box-sizing: border-box;
+
+          .anticon {
+            color: rgba($color: #000000, $alpha: 0.4);
+          }
+
+          &.ant-menu-item-selected {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+
+  .checkout-panel__main-board__content {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background: $primaryBgColor;
+  }
+}

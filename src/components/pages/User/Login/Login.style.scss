@@ -1,0 +1,208 @@
+$primaryTextShadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+$fontSize: 12px;
+
+.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  @extend .centered-content;
+  position: relative;
+  overflow: hidden;
+
+  background: url("../../../../assets/images/bg.jpg");
+  background-size: 100% 100%;
+
+  .dark-bg {
+    background: rgba($color: #000, $alpha: 0.7);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+  }
+
+  .__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 15%;
+
+    .__company-logo {
+      width: 28px;
+      margin-right: 9px;
+    }
+
+    .__company-brand {
+      .__name {
+        font-size: 15px;
+        letter-spacing: 2px;
+        color: darkorange;
+        font-weight: bold;
+      }
+
+      .__slogan {
+        font-size: 8px;
+        font-style: italic;
+        color: white;
+        letter-spacing: 0.5px;
+        margin-top: -2.5px;
+      }
+    }
+  }
+
+  .wave {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.8));
+
+    path {
+      fill: #ff981a;
+    }
+  }
+
+  .wave2 {
+    position: absolute;
+    z-index: 2;
+    right: -47%;
+    top: 0;
+    transform: rotate(106deg);
+    filter: drop-shadow(2px 0 2px rgba(0, 0, 0, 0.6));
+
+    path {
+      fill: #ff8220;
+    }
+  }
+
+  .login {
+    border-radius: 5px;
+    padding: 70px 40px 50px 40px;
+    position: relative;
+    z-index: 10;
+    width: 25%;
+    height: 70%;
+    margin-top: -2%;
+    background: white;
+    @extend .centered-content;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    position: relative;
+
+    .__main-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
+      color: #ff8220;
+      letter-spacing: 2px;
+      font-size: 24px;
+    }
+
+    .__cover-img {
+      background: url("https://cdn0.iconfinder.com/data/icons/business-office-and-people-in-flat/256/Businessman-2-512.png");
+      background-size: 100% 100%;
+      background-position: center center;
+      height: 70px;
+      width: 70px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    .__form {
+      width: 100%;
+      padding-top: 15px;
+
+      .ant-form-item-has-error .ant-form-item-explain,
+      .ant-form-item-has-error .ant-form-item-split {
+        font-size: 10px;
+      }
+
+      .ant-form-item-control {
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin-left: 0;
+      }
+
+      $inputBgColor: white;
+      .ant-input-affix-wrapper {
+        background: $inputBgColor;
+        border: 1px solid #eee;
+        overflow: hidden;
+        box-shadow: none;
+        outline-style: none;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin-bottom: 3px;
+
+        .anticon {
+          color: rgba($color: #000000, $alpha: 0.4);
+        }
+      }
+      .ant-input {
+        font-size: $fontSize;
+        background: $inputBgColor;
+        padding-left: 3px;
+      }
+
+      .ant-form-item-has-error .ant-form-item-explain,
+      .ant-form-item-has-error .ant-form-item-split {
+        font-size: 10px;
+      }
+
+      .__form__icon {
+        margin-right: 5px;
+      }
+
+      .__form__forgot-password {
+        height: 25px;
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+
+        a {
+          text-decoration: none;
+          color: #ff8220;
+        }
+      }
+
+      .__form__btn-submit {
+        background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+        border: 0;
+        width: 100%;
+        font-weight: bold;
+        min-height: 40px;
+        margin-top: 15px;
+        border-radius: 24px;
+        text-shadow: $primaryTextShadow;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      }
+    }
+  }
+
+  .__footer {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    font-size: 11px;
+    color: white;
+    font-weight: bold;
+  }
+}

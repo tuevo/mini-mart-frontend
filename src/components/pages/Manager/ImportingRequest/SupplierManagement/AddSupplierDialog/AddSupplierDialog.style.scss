@@ -1,0 +1,38 @@
+$boxShadow1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+$primaryFontSize: 12px;
+
+.importing-request__container__suppliers__toolbar__add-supplier-dialog {
+  .importing-request__container__suppliers__toolbar__add-supplier-dialog__btn-open {
+    border: 0;
+    background: #ff8220;
+    color: white;
+    border-radius: 50%;
+    box-shadow: $boxShadow1;
+  }
+}
+
+.importing-request__container__suppliers__toolbar__add-supplier-dialog__content {
+  .ant-modal-body {
+    padding-bottom: 10px;
+  }
+  
+  .ant-form-item {
+    margin-bottom: 15px;
+    label {
+      font-size: $primaryFontSize;
+      color: rgba($color: #000000, $alpha: 0.65);
+    }
+  }
+
+  .ant-input {
+    font-size: $primaryFontSize;
+    width: 100%;
+  }
+
+  .ant-form-item-has-error .ant-form-item-explain,
+  .ant-form-item-has-error .ant-form-item-split {
+    font-size: 10px;
+    min-height: 0;
+    height: 10px;
+  }
+}

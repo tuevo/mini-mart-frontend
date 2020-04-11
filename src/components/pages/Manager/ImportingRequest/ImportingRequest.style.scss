@@ -1,0 +1,107 @@
+.importing-request {
+  width: 100%;
+  height: 100vh;
+  background: #ff8220;
+  overflow: hidden;
+  padding: 0 10px;
+  padding-top: 5px;
+
+  $boxShadow1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  $boxShadow2: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 5px rgba(0, 0, 0, 0.23);
+  $textShadow1: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  $borderRadius0: 3px;
+  $borderRadius1: 5px;
+  $borderRadius2: 7px;
+  $fontSize: 12px;
+
+  .block-style {
+    background: white;
+    border-radius: $borderRadius1;
+    box-shadow: $boxShadow2;
+    height: 100%;
+    width: 100%;
+  }
+
+  .styled-scrollbar {
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba($color: #000000, $alpha: 0.2);
+      border-radius: $borderRadius1;
+    }
+  }
+
+  .importing-request__container {
+    width: 100%;
+    height: 90%;
+
+    .importing-request__container__block {
+      @extend .block-style;
+      padding: 10px;
+
+      .importing-request__container__block__header {
+        height: 7%;
+        display: flex;
+        align-items: center;
+        padding-left: 2%;
+        position: relative;
+        font-size: $fontSize;
+
+        $todoColor: #ff6f61;
+        $progressingColor: #40a5ec;
+        $doneColor: #4bb543;
+
+        .importing-request__container__block__header__title {
+          font-weight: bold;
+
+          &.--to-do {
+            color: $todoColor;
+          }
+
+          &.--progressing {
+            color: $progressingColor;
+          }
+
+          &.--done {
+            color: $doneColor;
+          }
+        }
+
+        .importing-request__container__block__header__number {
+          position: absolute;
+          right: 0;
+          min-width: 40px;
+          color: white;
+          text-align: center;
+          font-weight: bold;
+          font-size: $fontSize;
+          padding: 2px;
+          border-radius: 24px;
+
+          &.--to-do {
+            background: $todoColor;
+          }
+
+          &.--progressing {
+            background: $progressingColor;
+          }
+
+          &.--done {
+            background: $doneColor;
+          }
+        }
+      }
+
+      .importing-request__container__block__body {
+        height: 93%;
+        background: #eee;
+        border-radius: $borderRadius0;
+        padding: 7px;
+        overflow: auto;
+      }
+    }
+  }
+}

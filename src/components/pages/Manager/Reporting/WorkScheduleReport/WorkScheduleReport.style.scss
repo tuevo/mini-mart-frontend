@@ -1,0 +1,130 @@
+.reporting__work-schedule-report {
+  .styled-scrollbar {
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba($color: #000000, $alpha: 0.2);
+      border-radius: 5px;
+    }
+  }
+
+  .reporting__work-schedule-report__list-staffs {
+    .reporting__work-schedule-report__list-staffs__label {
+      color: rgba($color: #000000, $alpha: 0.5);
+    }
+
+    .ant-input-affix-wrapper {
+      margin-top: 10px;
+    }
+
+    .reporting__work-schedule-report__list-staffs__wrapper {
+      margin-top: 20px;
+      height: 300px;
+      border: 1px solid #eee;
+      border-radius: 3px;
+      overflow: auto;
+      @extend .styled-scrollbar;
+
+      .ant-radio-group {
+        display: flex;
+        flex-direction: column;
+
+        .ant-radio-button-wrapper {
+          border: 0;
+          box-shadow: none;
+          outline-style: none;
+
+          &:hover {
+            color: inherit;
+          }
+        }
+
+        .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+          background: none;
+          color: inherit;
+        }
+      }
+
+      .reporting__work-schedule-report__list-staffs__staff {
+        height: 60px;
+
+        &.reporting__work-schedule-report__list-staffs__staff--selected {
+          background: #fff6e6 !important;
+        }
+
+        .reporting__work-schedule-report__list-staffs__staff__avatar {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          padding-top: 5px;
+        }
+
+        .reporting__work-schedule-report__list-staffs__staff__info {
+          padding-left: 10px;
+          padding-top: 10px;
+
+          .reporting__work-schedule-report__list-staffs__staff__info__name {
+            font-size: 12px;
+          }
+
+          .reporting__work-schedule-report__list-staffs__staff__info__role {
+            font-size: 9px;
+            color: rgba($color: #000000, $alpha: 0.4);
+            margin-top: -12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ant-modal {
+  top: 5%;
+}
+
+.reporting__work-schedule-report__content {
+  .ant-modal-body {
+    padding-bottom: 0;
+  }
+
+  .ant-modal-content {
+    width: 80vw;
+    left: -51%;
+  }
+
+  .reporting__work-schedule-report__content__print-preview {
+    padding: 20px !important;
+    background: #eee;
+
+    .reporting__work-schedule-report__content__print-preview__wrapper {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      background: white;
+    }
+  }
+
+  .reporting__work-schedule-report__content__btn-print {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      background: #ff8220;
+      border: 0;
+      font-weight: bold;
+      border-radius: 24px;
+      width: 40%;
+      min-height: 35px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+      &:disabled {
+        background: #eee;
+        box-shadow: none;
+      }
+    }
+  }
+}

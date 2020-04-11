@@ -1,0 +1,132 @@
+.transaction-history {
+  $primaryBorderRadius: 7px;
+  $secondaryBorderRadius: 3px;
+  $boxShadow1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  $textShadow1: 1px 1px 2px
+    rgba(
+      $color: #000000,
+      $alpha: 0.4
+    );
+  $primaryFontSize: 12px;
+
+  .styled-scrollbar {
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba($color: #000000, $alpha: 0.2);
+      border-radius: 5px;
+    }
+  }
+
+  background: #eee;
+  width: 100%;
+  height: 100%;
+  border-radius: $primaryBorderRadius;
+  overflow: hidden;
+  border: 1px solid #eee;
+  position: relative;
+  z-index: 1;
+
+  .transaction-history__header {
+    width: 100%;
+    height: 45%;
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 3% 4%;
+
+    .transaction-history__header__title {
+      display: flex;
+      align-items: center;
+      height: 15%;
+      color: white;
+      font-size: 1.2rem;
+
+      .transaction-history__header__title__icon {
+        margin-right: 1%;
+      }
+
+      .transaction-history__header__title__text {
+        font-weight: bold;
+        text-shadow: $textShadow1;
+      }
+    }
+  }
+
+  .transaction-history__content {
+    height: 82%;
+    width: 96%;
+    background: white;
+    box-shadow: $boxShadow1;
+    position: absolute;
+    top: 15%;
+    left: 2%;
+    z-index: 3;
+    border-radius: $primaryBorderRadius - 2;
+    overflow: hidden;
+    padding: 2% 0;
+
+    .transaction-history__content__timeline {
+      height: 100%;
+      width: 100%;
+      overflow: auto;
+      overflow-x: hidden;
+      padding-top: 1%;
+      padding-left: 2%;
+      @extend .styled-scrollbar;
+
+      .transaction-history__content__timeline__empty {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba($color: #000000, $alpha: 0.4);
+      }
+
+      .transaction-history__content__timeline__item {
+        min-height: 60px;
+        border: 1px solid #eee;
+        background: #f8f8f8;
+        border-radius: $secondaryBorderRadius;
+        padding: 15px;
+        font-size: $primaryFontSize - 1;
+
+        .transaction-history__content__timeline__item__price-total {
+          .transaction-history__content__timeline__item__price-total__number {
+            font-size: $primaryFontSize + 0.5;
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .ant-timeline {
+        width: 100%;
+      }
+
+      .ant-timeline.ant-timeline-label .ant-timeline-item-label {
+        width: calc(12% - 12px);
+        text-align: left;
+      }
+
+      .ant-timeline.ant-timeline-alternate .ant-timeline-item-left .ant-timeline-item-content,
+      .ant-timeline.ant-timeline-right .ant-timeline-item-left .ant-timeline-item-content,
+      .ant-timeline.ant-timeline-label .ant-timeline-item-left .ant-timeline-item-content {
+        left: calc(17% - 4px);
+        width: calc(80.5% - 14px);
+      }
+
+      .ant-timeline-item-tail,
+      .ant-timeline.ant-timeline-alternate .ant-timeline-item-head,
+      .ant-timeline.ant-timeline-right .ant-timeline-item-head,
+      .ant-timeline.ant-timeline-label .ant-timeline-item-head {
+        left: 14.5%;
+      }
+    }
+  }
+}

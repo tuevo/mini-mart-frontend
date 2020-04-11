@@ -1,0 +1,47 @@
+.reporting {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ff8220;
+
+  .reporting__menu {
+    width: 70%;
+
+    .ant-card {
+      border-radius: 0;
+    }
+
+    .reporting__menu__item {
+      height: 325px;
+      margin-top: -10vh;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+      cursor: pointer;
+
+      &:hover {
+        margin-top: -12vh;
+      }
+
+      .reporting__menu__item__icon {
+        color: #ff8220;
+      }
+
+      .ant-card-cover {
+        padding: 20px 10px 0 10px;
+        img {
+          height: 150px;
+        }
+      }
+
+      .ant-card-meta-title {
+        font-size: 14px;
+      }
+
+      .ant-card-meta-description {
+        font-size: 10px;
+      }
+    }
+  }
+}

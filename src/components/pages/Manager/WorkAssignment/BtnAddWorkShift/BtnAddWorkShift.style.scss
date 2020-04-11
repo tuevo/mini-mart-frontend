@@ -1,0 +1,38 @@
+.add-work-shift-dialog {
+  .add-work-shift-dialog__btn-open {
+    color: #ff8220;
+    width: 100%;
+    display: table;
+    margin: 0 auto;
+    margin-top: -5px;
+    transform: scale(1.5, 1.5);
+    transition: 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.add-work-shift-dialog__time-picker {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .add-work-shift-dialog__time-picker__time-selection {
+    margin: 10px 0;
+
+    .add-work-shift-dialog__time-picker__time-selection__label {
+      padding-top: 10px;
+    }
+
+    .ant-picker {
+      width: 200px;
+    }
+  }
+}
+
+.ant-picker-now-btn {
+  display: none;
+}

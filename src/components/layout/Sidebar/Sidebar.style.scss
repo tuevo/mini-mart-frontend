@@ -1,0 +1,77 @@
+$primaryTextShadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+
+.sidebar {
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  background: white;
+  box-sizing: border-box;
+
+  .sidebar__header {
+    height: 60px;
+    padding: 20px 0 20px 20px;
+    display: flex;
+    align-items: center;
+    background: white;
+
+    .sidebar__header__company-logo {
+      width: 25px;
+      margin-right: 7px;
+      margin-top: -1px;
+    }
+
+    .sidebar__header__company-brand {
+      .sidebar__header__company-brand__name {
+        font-size: 13px;
+        letter-spacing: 2px;
+        color: #ff8220;
+        font-weight: bold;
+      }
+
+      .sidebar__header__company-brand__slogan {
+        font-size: 8px;
+        font-style: italic;
+        margin-top: -3px;
+        color: gray;
+      }
+    }
+  }
+
+  .ant-menu-item {
+    color: rgba($color: #000000, $alpha: 0.65) !important;
+    font-size: 12px !important;
+  }
+
+  .ant-menu-item-selected {
+    background: #ff8220 !important;
+    // background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%) !important;
+    font-weight: bold;
+    color: white !important;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+    &.ant-menu-item .anticon,
+    .ant-menu-submenu-title .anticon {
+      color: white !important;
+    }
+  }
+
+  .ant-menu-vertical .ant-menu-item::after,
+  .ant-menu-vertical-left .ant-menu-item::after,
+  .ant-menu-vertical-right .ant-menu-item::after,
+  .ant-menu-inline .ant-menu-item::after {
+    border-right: 0;
+  }
+
+  .ant-menu-root.ant-menu-vertical,
+  .ant-menu-root.ant-menu-vertical-left,
+  .ant-menu-root.ant-menu-vertical-right,
+  .ant-menu-root.ant-menu-inline {
+    background: transparent;
+    width: 201px !important;
+    padding-right: 2px;
+  }
+}

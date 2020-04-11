@@ -1,0 +1,45 @@
+.add-work-schedule-dialog {
+  .add-work-schedule-dialog__btn-open {
+    // background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    background: white;
+    color: #ff8220;
+    border: 0;
+    border-radius: 24px;
+    width: 100%;
+    font-weight: bold;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    text-shadow: none;
+    min-height: 35px;
+    font-size: 12px;
+    transition: 0.4s;
+    margin-bottom: 7px;
+
+    &:hover {
+      transform: scale(1.02, 1.02);
+    }
+  }
+}
+
+.add-work-schedule-dialog__calendar {
+  .ant-radio-button-wrapper:first-child,
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+    display: none !important;
+  }
+
+  .add-work-schedule-dialog__calendar__month {
+    padding: 5px;
+    font-size: 12px;
+    transition: 0.2s;
+
+    &.add-work-schedule-dialog__calendar__month--selected {
+      background: #ff8220;
+      color: white;
+      font-weight: bold;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      background: #fff6e6;
+    }
+  }
+}

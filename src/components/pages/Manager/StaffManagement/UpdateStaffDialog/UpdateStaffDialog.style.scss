@@ -1,0 +1,80 @@
+.staff-management__body__staffs__content__list-staffs__header__dialogs__update-staff-dialog {
+  .staff-management__body__staffs__content__list-staffs__header__dialogs__update-staff-dialog__btn-open {
+    color: white;
+    font-size: 16px;
+    background: orange;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin-top: 15px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.staff-management__body__staffs__content__list-staffs__header__dialogs__update-staff-dialog__form {
+  $fontSize1: 12px;
+
+  .staff-management__body__staffs__content__list-staffs__header__dialogs__update-staff-dialog__form__img-uploader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 30px;
+  }
+
+  .staff-management__body__staffs__content__list-staffs__header__dialogs__update-staff-dialog__form__title {
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+
+    .staff-management__body__staffs__content__list-staffs__header__dialogs__update-staff-dialog__form__title__icon {
+      display: block;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ff8220;
+      color: white;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+
+  .ant-divider,
+  .ant-divider-vertical {
+    height: 100%;
+  }
+
+  .ant-form-item {
+    margin-bottom: 15px;
+    label {
+      font-size: $fontSize1;
+      color: rgba($color: #000000, $alpha: 0.7);
+    }
+  }
+
+  .ant-input {
+    font-size: $fontSize1;
+  }
+
+  .ant-form-item-has-error .ant-form-item-explain,
+  .ant-form-item-has-error .ant-form-item-split {
+    font-size: 10px;
+    min-height: 0;
+    height: 5px;
+  }
+
+  .ant-picker-input {
+    input {
+      font-size: $fontSize1;
+    }
+  }
+
+  .ant-select,
+  .ant-picker {
+    width: 100%;
+    font-size: $fontSize1;
+  }
+}

@@ -1,0 +1,79 @@
+.importing-request-dialog__content {
+  .importing-request-dialog__content__title {
+    .importing-request-dialog__content__title__icon {
+      color: #ff6f61;
+      margin-right: 10px;
+    }
+
+    .importing-request-dialog__content__title__text {
+      color: crimson;
+    }
+  }
+
+  .importing-request-dialog__content__btn-send-request {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .importing-request-dialog__content__btn-send-request__btn {
+      background: #ff8220;
+      border: 0;
+      font-weight: bold;
+      font-size: 12px;
+      min-height: 35px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+  }
+
+  .ant-modal-body {
+    padding-bottom: 0;
+  }
+
+  .styled-scrollbar {
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba($color: #000000, $alpha: 0.2);
+      border-radius: 5px;
+    }
+  }
+
+  $tableFontSize: 12px;
+  .ant-table {
+    thead > tr > th {
+      font-size: $tableFontSize;
+      color: #ff8220;
+      font-weight: bold;
+    }
+
+    tbody > tr {
+      &:hover {
+        td {
+          background: #fff6e6;
+        }
+      }
+
+      td {
+        font-size: $tableFontSize;
+
+        img {
+          width: 30px;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+  .ant-table-body {
+    height: 100%;
+    @extend .styled-scrollbar;
+  }
+
+  .ant-spin-dot-item {
+    background: #ff8220 !important;
+  }
+}

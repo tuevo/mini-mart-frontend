@@ -1,0 +1,23 @@
+.product-management__edit-category-dialog {
+  .product-management__edit-category-dialog__btn-open {
+    color: rgba($color: #000000, $alpha: 0.65);
+  }
+}
+.product-management__edit-category-dialog__content {
+  width: 100%;
+
+  .ant-form-item {
+    label {
+      color: rgba($color: #000000, $alpha: 0.5);
+    }
+
+    .ant-form-item-control-input {
+      width: 100%;
+    }
+  }
+
+  .ant-form-item-has-error .ant-form-item-explain,
+  .ant-form-item-has-error .ant-form-item-split {
+    font-size: 10px;
+  }
+}
